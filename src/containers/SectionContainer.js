@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Banner extends Component {
+class SectionContainer extends Component {
     constructor(props) {
         super(props);
         this.state = { width: 0, height: 0 };
@@ -21,20 +21,14 @@ class Banner extends Component {
     }
 
     render() { 
-        return ( 
-            <div style={{...style, fontSize: '4em', width: this.state.width, height: this.state.height}}>
-                Welcome!
+        return (
+            <div style={{...style, ...this.props.style, width: this.state.width, height: this.state.height}}>
+                {this.props.children}
             </div>
         );
     }
 }
 
-const style = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontFamily: 'Staatliches, cursive'
-}
-
+const style = { display: 'flex', justifyContent: 'center', alignItems: 'center'}
  
-export default Banner;
+export default SectionContainer;
