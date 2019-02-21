@@ -9,13 +9,18 @@ class Main extends Component {
             <div >
                 <Banner />
                 <SectionContainer style={{backgroundColor: '#222222'}}>
-                    Section 1
+                <i class="material-icons">
+                    keyboard_arrow_down
+                </i>
                 </SectionContainer>
                 <SectionContainer style={{backgroundColor: '#333333'}}>
                     Section 2
                 </SectionContainer>
                 <SectionContainer style={{backgroundColor: '#444444'}}>
                     Section 3
+                </SectionContainer>
+                <SectionContainer style={{backgroundColor: '#555555'}}>
+                    Section 4
                 </SectionContainer>
             </div>
         );
