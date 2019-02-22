@@ -36,9 +36,13 @@ class ScrollButton extends React.Component{
 
         return (
             <div style={containerStyle}>
-                <i className="material-icons" style={iconStyle} onClick={this.onClick} >
-                    keyboard_arrow_down
-                </i>
+                <div className={this.props.scrollPosition === this.props.maxPosition
+                        ? 'rotate180'
+                        : this.props.scrollPosition < this.props.maxPosition ? 'rotateFrom180To0' : null}>
+                    <i className="material-icons" style={iconStyle} onClick={this.onClick} >
+                        keyboard_arrow_down
+                    </i>
+                </div>
             </div>
         );
     }
