@@ -22,7 +22,8 @@ class Banner extends Component {
 
     render() { 
         return ( 
-            <div style={{...style, fontSize: '4em', width: this.state.width, height: this.state.height}}>
+            <div className='fadeInMoveUp'
+                style={{...style, fontSize: '4em', width: this.state.width, height: this.state.height}}>
                 Welcome!
             </div>
         );
@@ -33,7 +34,7 @@ const style = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    fontFamily: 'Staatliches, cursive'
+    fontFamily: 'Staatliches, cursive',
 }
 
  

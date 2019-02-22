@@ -18,3 +18,13 @@
     animation-name: rotateFrom180To0;
     animation-duration: 1s;
 }
+
+@keyframes fadeInMoveUp {
+    from {opacity: 0; transform: translateY(1em)}
+    to {opacity: 1; transform: translateY(0px)}
+}
+
+.fadeInMoveUp {
+    animation: fadeInMoveUp 1.5s forwards;
+    -webkit-animation: fadeInMoveUp 1.5s forwards; /* for less modern browsers */
+}
