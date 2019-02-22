@@ -1,8 +1,22 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { changeScrollPosition } from "../actions/ScrollActions";
+import { debounce } from "lodash";
 
 class ScrollButton extends React.Component{
+
+    componentDidMount = () => {
+        window.addEventListener('scroll', this.handleScroll);
+    };
+    
+    componentWillUnmount = () => {
+        window.removeEventListener('scroll', this.handleScroll);
+    };
+    
+    handleScroll = debounce(() => {
+        let position = Math.floor(window.scrollY / window.innerHeight);
+        this.props.changeScrollPosition(position);
+    }, 100);
 
     onClick = () => {
 
