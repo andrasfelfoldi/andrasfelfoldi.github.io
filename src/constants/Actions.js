@@ -1,0 +1,4 @@
+export default {
+    SCROLL_POSITION_CHANGED: 'SCROLL_POSITION_CHANGED',
+    
+}
