@@ -75,4 +75,5 @@ const containerStyle = {
 
 const iconStyle = {
     cursor: 'pointer',
+    userSelect: 'none'
 }
