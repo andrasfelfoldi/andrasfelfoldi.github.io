@@ -7,17 +7,17 @@ class Main extends Component {
     render() { 
         return (
             <div >
-                <Banner />
-                <SectionContainer style={{backgroundColor: '#222222'}}>
+                <Banner id={'banner'} />
+                <SectionContainer id={'section ' + 1} style={{backgroundColor: '#222222'}}>
                     Section 1
                 </SectionContainer>
-                <SectionContainer style={{backgroundColor: '#333333'}}>
+                <SectionContainer id={'section ' + 2} style={{backgroundColor: '#333333'}}>
                     Section 2
                 </SectionContainer>
-                <SectionContainer style={{backgroundColor: '#444444'}}>
+                <SectionContainer id={'section ' + 3} style={{backgroundColor: '#444444'}}>
                     Section 3
                 </SectionContainer>
-                <SectionContainer style={{backgroundColor: '#555555'}}>
+                <SectionContainer id={'section ' + 4} style={{backgroundColor: '#555555'}}>
                     Section 4
                 </SectionContainer>
             </div>

@@ -5,6 +5,18 @@ import { debounce } from "lodash";
 
 class ScrollButton extends React.Component{
 
+    state={rotate180: false, rotateback: false}
+
+    scrollSectionIds = [
+        'banner',
+        'section 1',
+        'section 2',
+        'section 3',
+        'section 4',
+    ]
+    
+    nextSection = document.getElementById(this.scrollSectionIds[1]);
+
     componentDidMount = () => {
         window.addEventListener('scroll', this.handleScroll);
     };
@@ -14,31 +26,41 @@ class ScrollButton extends React.Component{
     };
     
     handleScroll = debounce(() => {
-        let position = Math.floor(window.scrollY / window.innerHeight);
-        this.props.changeScrollPosition(position);
+        let nextSection = null;
+
+        this.scrollSectionIds.forEach((sectionId, i) => {
+            let section = document.getElementById(sectionId);
+            if(nextSection === null && section.getBoundingClientRect().top > 0){ // not to override first selected section
+                if(i < this.scrollSectionIds.length){
+                    nextSection = section;
+                }
+            }
+        })
+
+        if(nextSection === null){
+            nextSection = document.getElementById(this.scrollSectionIds[0]); // scrolling to top from last section
+            this.setState({rotate180: true, rotateback: false});
+        }else if(this.state.rotate180){
+            this.setState({rotate180: false, rotateback: true});
+        }
+
+        this.nextSection = nextSection;
     }, 100);
 
     onClick = () => {
-
-        let nextPosition;
-
-        if(this.props.scrollPosition === this.props.maxPosition){
-            nextPosition = 0;
-        }else{
-            nextPosition = this.props.scrollPosition + 1;
+        if(this.nextSection === null){
+            this.nextSection = document.getElementById(this.scrollSectionIds[1]);
         }
-
-        window.scrollTo({ top: window.innerHeight * nextPosition, behavior: 'smooth' })
-        this.props.changeScrollPosition(nextPosition);
+        this.nextSection.scrollIntoView({behavior: 'smooth'});
     }
 
     render() {
 
         return (
             <div style={containerStyle}>
-                <div className={this.props.scrollPosition === this.props.maxPosition
+                <div className={this.state.rotate180
                         ? 'rotate180'
-                        : this.props.scrollPosition < this.props.maxPosition ? 'rotateFrom180To0' : null}>
+                        : this.state.rotateback ? 'rotateFrom180To0' : null}>
                     <i className="material-icons" style={iconStyle} onClick={this.onClick} >
                         keyboard_arrow_down
                     </i>

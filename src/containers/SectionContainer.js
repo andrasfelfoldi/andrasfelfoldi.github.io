@@ -17,12 +17,12 @@ class SectionContainer extends Component {
     }
     
     updateWindowDimensions() {
-        this.setState({ width: window.innerWidth, height: window.innerHeight });
+        this.setState({ height: window.innerHeight });
     }
 
     render() { 
         return (
-            <div style={{...style, ...this.props.style, width: this.state.width, height: this.state.height}}>
+            <div id={this.props.id} style={{...style, ...this.props.style, width: '100%', height: this.state.height}}>
                 {this.props.children}
             </div>
         );

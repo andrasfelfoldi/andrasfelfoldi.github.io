@@ -17,13 +17,13 @@ class Banner extends Component {
     }
     
     updateWindowDimensions() {
-        this.setState({ width: window.innerWidth, height: window.innerHeight });
+        this.setState({ height: window.innerHeight });
     }
 
     render() { 
         return ( 
-            <div className='fadeInMoveUp'
-                style={{...style, fontSize: '4em', width: this.state.width, height: this.state.height}}>
+            <div id={this.props.id} className='fadeInMoveUp'
+                style={{...style, fontSize: '4em', width: '100%', height: this.state.height}}>
                 Welcome!
             </div>
         );
