@@ -2,6 +2,7 @@ import React from "react"
 import "../../static/css/reset.css";
 import "../../static/css/index.css";
 import "../../static/css/animate.css";
+import "../../static/css/borders.css";
 import Main from "../containers/Main";
 import ScrollButton from "../components/ScrollButton";
 import rootReducer from "../reducers/rootReducer";
