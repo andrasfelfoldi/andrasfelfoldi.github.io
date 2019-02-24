@@ -15,7 +15,7 @@ class ScrollButton extends React.Component{
         'section 4',
     ]
     
-    nextSection = document.getElementById(this.scrollSectionIds[1]);
+    nextSection = null;
 
     componentDidMount = () => {
         window.addEventListener('scroll', this.handleScroll);
@@ -26,36 +26,32 @@ class ScrollButton extends React.Component{
     };
     
     handleScroll = debounce(() => {
-        if(typeof document !== "undefined"){
-            let nextSection = null;
+        let nextSection = null;
 
-            this.scrollSectionIds.forEach((sectionId, i) => {
-                let section = document.getElementById(sectionId);
-                if(nextSection === null && section.getBoundingClientRect().top > 0){ // not to override first selected section
-                    if(i < this.scrollSectionIds.length){
-                        nextSection = section;
-                    }
+        this.scrollSectionIds.forEach((sectionId, i) => {
+            let section = document.getElementById(sectionId);
+            if(nextSection === null && section.getBoundingClientRect().top > 0){ // not to override first selected section
+                if(i < this.scrollSectionIds.length){
+                    nextSection = section;
                 }
-            })
-
-            if(nextSection === null){
-                nextSection = document.getElementById(this.scrollSectionIds[0]); // scrolling to top from last section
-                this.setState({rotate180: true, rotateback: false});
-            }else if(this.state.rotate180){
-                this.setState({rotate180: false, rotateback: true});
             }
+        })
 
-            this.nextSection = nextSection;
+        if(nextSection === null){
+            nextSection = document.getElementById(this.scrollSectionIds[0]); // scrolling to top from last section
+            this.setState({rotate180: true, rotateback: false});
+        }else if(this.state.rotate180){
+            this.setState({rotate180: false, rotateback: true});
         }
+
+        this.nextSection = nextSection;
     }, 100);
 
     onClick = () => {
-        if(typeof document !== "undefined"){
-            if(this.nextSection === null){
-                this.nextSection = document.getElementById(this.scrollSectionIds[1]);
-            }
-            this.nextSection.scrollIntoView({behavior: 'smooth'});
+        if(this.nextSection === null){
+            this.nextSection = document.getElementById(this.scrollSectionIds[1]);
         }
+        this.nextSection.scrollIntoView({behavior: 'smooth'});
     }
 
     render() {
