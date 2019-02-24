@@ -1,0 +1,15 @@
+#topBorder {
+    background-image: linear-gradient(to right, #670097, #8f008f);
+}
+
+#bottomBorder {
+    background-image: linear-gradient(to right, #8f008f, #af0089);
+}
+
+#leftBorder {
+    background-image: linear-gradient(to bottom, #670097, #8f008f);
+}
+
+#rightBorder {
+    background-image: linear-gradient(to bottom, #8f008f, #af0089);
+}
