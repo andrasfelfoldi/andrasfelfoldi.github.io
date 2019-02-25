@@ -51,6 +51,7 @@ class ScrollButton extends React.Component{
         if(this.nextSection === null){
             this.nextSection = document.getElementById(this.scrollSectionIds[1]);
         }
+        
         this.nextSection.scrollIntoView({behavior: 'smooth'});
     }
 
