@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
-// import './banner.css'
-
 class Banner extends Component {
     constructor(props) {
         super(props);
         this.state = { width: 0, height: 0 };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
       }
+
+    style = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontFamily: 'Staatliches, cursive',
+        fontSize: '4em',
+        width: '100%',
+    }
       
     componentDidMount() {
         this.updateWindowDimensions();
@@ -29,12 +36,14 @@ class Banner extends Component {
 
     render() { 
         return ( 
-            <div id={this.props.id} className='banner fadeInMoveUp'
-                style={{height: this.state.height}}>
+            <div id={this.props.id} className='fadeInMoveUp'
+                style={{...this.style, height: this.state.height}}>
                 Welcome!
             </div>
         );
     }
 }
+
+
  
 export default Banner;
