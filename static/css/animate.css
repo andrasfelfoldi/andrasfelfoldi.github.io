@@ -27,6 +27,6 @@
 .fadeInMoveUp {
     animation: fadeInMoveUp 1.5s forwards;
     -webkit-animation: fadeInMoveUp 1.5s forwards; /* for less modern browsers */
-    animation-delay: 0.5s;
-    -webkit-animation-delay: 0.5s;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
 }
