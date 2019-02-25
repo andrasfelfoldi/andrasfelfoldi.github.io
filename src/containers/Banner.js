@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import isMobileDevice from "../utils/isMobileDevice";
 
 class Banner extends Component {
     constructor(props) {
@@ -10,7 +9,7 @@ class Banner extends Component {
       
     componentDidMount() {
         this.updateWindowDimensions();
-        if(!isMobileDevice()){
+        if(!this.isMobileDevice()){
             window.addEventListener('resize', this.updateWindowDimensions);
         }
     }
@@ -22,6 +21,10 @@ class Banner extends Component {
     updateWindowDimensions() {
         this.setState({ height: window.innerHeight });
     }
+
+    isMobileDevice = () => {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    };
 
     render() { 
         return ( 
