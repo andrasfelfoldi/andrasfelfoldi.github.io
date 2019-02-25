@@ -25,6 +25,6 @@
 }
 
 .fadeInMoveUp {
-    animation: fadeInMoveUp 1.5s ease-in-out, 1.0s;
-    -webkit-animation: fadeInMoveUp 1.5s ease-in-out, 1.0s; /* for less modern browsers */
+    animation: fadeInMoveUp 1.5s ease-in-out, 2.0s;
+    -webkit-animation: fadeInMoveUp 1.5s ease-in-out, 2.0s; /* for less modern browsers */
 }
