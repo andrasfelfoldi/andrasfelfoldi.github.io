@@ -31,7 +31,8 @@ class ScrollButton extends React.Component{
 
         this.scrollSectionIds.forEach((sectionId, i) => {
             let section = document.getElementById(sectionId);
-            if(nextSection === null && section.getBoundingClientRect().top > 0){ // not to override first selected section
+            if(nextSection === null && section.getBoundingClientRect().top > 0
+                || (section.getBoundingClientRect().bottom < window.innerHeight && section.getBoundingClientRect().bottom > 0 && section.getBoundingClientRect().top > 0)){ // not to override first selected section
                 if(i < lastIndex){
                     nextSection = section;
                 }
@@ -52,7 +53,7 @@ class ScrollButton extends React.Component{
         if(this.nextSection === null){
             this.nextSection = document.getElementById(this.scrollSectionIds[1]);
         }
-        console.log(this.nextSection.getBoundingClientRect().top)
+
         window.scrollBy({
             top: this.nextSection.getBoundingClientRect().top,
             behavior: 'smooth'
