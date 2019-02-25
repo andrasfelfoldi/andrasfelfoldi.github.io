@@ -23,8 +23,8 @@ class Main extends Component {
                 </SectionContainer>
                 <div id={'topBorder'} style={{position: 'fixed', top: 0, left: 0, width: '200%', height: 10, backgroundColor: '#888888'}}/>
                 <div id={'bottomBorder'} style={{position: 'fixed', bottom: 0, left: 0, width: '200%', height: 10, backgroundColor: '#888888'}}/>
-                <div id={'leftBorder'} style={{position: 'fixed', top: 0, left: 0, width: 10, height: '200%', backgroundColor: '#888888'}}/>
-                <div id={'rightBorder'} style={{position: 'fixed', top: 0, right: 0, width: 10, height: '200%', backgroundColor: '#888888'}}/>
+                <div id={'leftBorder'} style={{position: 'fixed', bottom: 0, left: 0, width: 10, height: '200%', backgroundColor: '#888888'}}/>
+                <div id={'rightBorder'} style={{position: 'fixed', bottom: 0, right: 0, width: 10, height: '200%', backgroundColor: '#888888'}}/>
             </div>
         );
     }
