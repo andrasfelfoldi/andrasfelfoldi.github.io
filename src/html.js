@@ -11,6 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta name="theme-color" content="#161616" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet" />
         {props.headComponents}
