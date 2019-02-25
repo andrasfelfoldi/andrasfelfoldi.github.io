@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './banner.css'
 
 class Banner extends Component {
     constructor(props) {
@@ -28,20 +29,12 @@ class Banner extends Component {
 
     render() { 
         return ( 
-            <div id={this.props.id} className='fadeInMoveUp'
-                style={{...style, fontSize: '4em', width: '100%', height: this.state.height}}>
+            <div id={this.props.id} className='banner fadeInMoveUp'
+                style={{height: this.state.height}}>
                 Welcome!
             </div>
         );
     }
 }
-
-const style = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontFamily: 'Staatliches, cursive',
-}
-
  
 export default Banner;

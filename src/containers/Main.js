@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Banner from './Banner';
+import Banner from './Banner/Banner';
 import SectionContainer from './SectionContainer';
 import SudokuShowcase from '../components/SudokuShowcase';
 
