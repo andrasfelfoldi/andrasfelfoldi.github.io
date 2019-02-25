@@ -13,6 +13,7 @@ class Banner extends Component {
         fontFamily: 'Staatliches, cursive',
         fontSize: '4em',
         width: '100%',
+        opacity: 0,
     }
       
     componentDidMount() {
