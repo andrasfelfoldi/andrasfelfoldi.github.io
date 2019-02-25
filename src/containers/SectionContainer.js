@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import isMobileDevice from "../utils/isMobileDevice";
 
 class SectionContainer extends Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class SectionContainer extends Component {
       
     componentDidMount() {
         this.updateWindowDimensions();
-        if(!this.isMobileDevice()){
+        if(!isMobileDevice()){
             window.addEventListener('resize', this.updateWindowDimensions);
         }
     }
@@ -21,10 +22,6 @@ class SectionContainer extends Component {
     updateWindowDimensions() {
         this.setState({ height: window.innerHeight });
     }
-
-    isMobileDevice = () => {
-        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-    };
 
     render() { 
         return (
