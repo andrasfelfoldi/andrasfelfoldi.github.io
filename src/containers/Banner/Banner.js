@@ -13,7 +13,6 @@ class Banner extends Component {
         fontFamily: 'Staatliches, cursive',
         fontSize: '4em',
         width: '100%',
-        opacity: 0,
     }
       
     componentDidMount() {
@@ -37,7 +36,7 @@ class Banner extends Component {
 
     render() { 
         return ( 
-            <div id={this.props.id} className='fadeInMoveUp'
+            <div id={this.props.id} className='fadeInMoveUpBanner'
                 style={{...this.style, height: this.state.height}}>
                 Welcome!
             </div>

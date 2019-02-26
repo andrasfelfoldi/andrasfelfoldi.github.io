@@ -46,7 +46,7 @@ class ScrollButton extends React.Component{
         }
 
         this.nextSection = nextSection;
-    }, 100);
+    }, 50);
 
     onClick = () => {
         if(this.nextSection === null){
@@ -56,8 +56,7 @@ class ScrollButton extends React.Component{
         window.scrollBy({
             top: this.nextSection.getBoundingClientRect().top,
             behavior: 'smooth'
-          });
-        // this.nextSection.scrollIntoView({behavior: 'smooth'});
+        });
     }
 
     render() {
