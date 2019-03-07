@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Banner from './Banner/Banner';
 import SectionContainer from './SectionContainer';
 import SudokuShowcase from '../components/SudokuShowcase';
+import FadeInMoveUp from './Animation/FadeInMoveUp';
 
 class Main extends Component {
 
@@ -25,13 +26,19 @@ class Main extends Component {
                     <SudokuShowcase />
                 </SectionContainer>
                 <SectionContainer id={'section ' + 2} style={{backgroundColor: '#333333'}}>
-                    Section 2
+                    <FadeInMoveUp>
+                        Section 2
+                    </FadeInMoveUp>
                 </SectionContainer>
                 <SectionContainer id={'section ' + 3} style={{backgroundColor: '#444444'}}>
-                    Section 3
+                    <FadeInMoveUp>
+                        Section 3
+                    </FadeInMoveUp>
                 </SectionContainer>
                 <SectionContainer id={'section ' + 4} style={{backgroundColor: '#555555'}}>
-                    Section 4
+                    <FadeInMoveUp>
+                        Section 4
+                    </FadeInMoveUp>
                 </SectionContainer>
                 <div id={'topBorder'} style={{position: 'fixed', top: 0, left: 0, width: '100%', height: 10, backgroundColor: '#888888'}}/>
                 <div id={'bottomBorder'} style={{position: 'fixed', bottom: 0, left: 0, width: '100%', height: 10, backgroundColor: '#888888'}}/>

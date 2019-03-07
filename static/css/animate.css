@@ -20,14 +20,14 @@
 }
 
 @keyframes fadeInMoveUp {
-    from {opacity: 0; transform: translateY(50%)}
+    from {opacity: 0; transform: translateY(100px)}
     to {opacity: 1; transform: translateY(0px)}
 }
 
 .fadeInMoveUp {
     opacity: 0;
-    animation: fadeInMoveUp 2s forwards;
-    -webkit-animation: fadeInMoveUp 2s forwards; /* for less modern browsers */
+    animation: fadeInMoveUp 2.5s forwards;
+    -webkit-animation: fadeInMoveUp 2.5s forwards; /* for less modern browsers */
 }
 
 @keyframes fadeInMoveUpBanner {

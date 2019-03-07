@@ -54,7 +54,7 @@ class ScrollButton extends React.Component{
         }
 
         window.scrollBy({
-            top: this.nextSection.getBoundingClientRect().top,
+            top: this.nextSection.getBoundingClientRect().top + 1,
             behavior: 'smooth'
         });
     }

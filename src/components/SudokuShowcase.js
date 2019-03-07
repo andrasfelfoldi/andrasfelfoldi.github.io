@@ -1,34 +1,18 @@
 import React from 'react';
 import lightThemeImage from "../../static/img/light-theme.png";
+import FadeInMoveUp from "../containers/Animation/FadeInMoveUp";
 
 class SudokuShowcase extends React.Component {
     constructor(props) {
         super(props);
         this.ref = React.createRef();
-        this.state = ({height: 0, width: 0, className: ''});
+        this.state = ({height: 0, width: 0});
       }
 
 
     componentDidMount = () => {
         this.setState({height: window.innerHeight / 2, width: window.innerWidth / 2})
-        window.addEventListener('scroll', this.handleScroll);
     }
-    
-    componentWillUnmount = () => {
-        window.removeEventListener('scroll', this.handleScroll);
-    };
-    
-    handleScroll = () => {
-
-        let node = this.ref.current;
-
-        if(node.getBoundingClientRect().top < window.innerHeight * 0.75){
-            this.setState({className: 'fadeInMoveUp'});
-            window.removeEventListener('scroll', this.handleScroll);
-        }
-
-    };
-    
 
     render() { 
 
@@ -40,9 +24,9 @@ class SudokuShowcase extends React.Component {
         }
 
         return (
-            <div ref={this.ref} style={{opacity: 0}} className={this.state.className}>
+            <FadeInMoveUp>
                 <img src={lightThemeImage} {...sizeProp}/>
-            </div>
+            </FadeInMoveUp>
         );
     }
 }
