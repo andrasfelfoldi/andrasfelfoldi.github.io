@@ -5,51 +5,43 @@ class RandomBubble extends React.Component {
     constructor(props) {
         super(props);
         this.state = ({ width: 0, height: 0, className: ''});
-
-        // this.lastTop = -1000;
-        // this.lastLeft = -1000;
-
-        this.lastTop = this.getRandomTop();
-        this.lastLeft = this.getRandomLeft();
     }
 
     classes = ['bubbleIn', 'bubbleOut'];
     current = 1;
 
     componentDidMount() {
-        // this.updateWindowDimensions();
-        // if(!this.isMobileDevice()){
-        //     window.addEventListener('resize', this.updateWindowDimensions);
-        // }
+        this.updateWindowDimensions();
+        if(!this.isMobileDevice()){
+            window.addEventListener('resize', this.updateWindowDimensions);
+        }
 
         this.lastTop = this.getRandomTop();
         this.lastLeft = this.getRandomLeft();
 
         setTimeout(() => {
             this.infinitelyToggleClass();
-        }, 1000 + getRandomIntBelow(5000));
+        }, 2000 + getRandomIntBelow(5000));
     }
     
-    // componentWillUnmount() {
-    //     window.removeEventListener('resize', this.updateWindowDimensions);
-    // }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
     
-    // updateWindowDimensions = () => {
-    //     this.setState({ height: window.innerHeight, width: window.innerWidth });
-    // }
+    updateWindowDimensions = () => {
+        this.setState({ height: window.innerHeight, width: window.innerWidth });
+    }
 
     isMobileDevice = () => {
         return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     };
 
     getRandomTop = () => {
-        if(window)
-        return getRandomIntBelow(window.innerHeight);
+        return getRandomIntBelow(this.state.height);
     }
 
     getRandomLeft = () => {
-        if(window)
-        return getRandomIntBelow(window.innerWidth);
+        return getRandomIntBelow(this.state.width);
     }
 
     infinitelyToggleClass = () => {
@@ -68,7 +60,7 @@ class RandomBubble extends React.Component {
 
     render() { 
         return (
-            <div style={{ position: 'absolute', top: this.lastTop, left: this.lastLeft }} className={this.state.className}>
+            <div style={{ opacity: 0, position: 'absolute', top: this.lastTop, left: this.lastLeft }} className={this.state.className}>
                 {this.props.children}
             </div>
         );

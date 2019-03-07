@@ -5,7 +5,7 @@ class BubblingDevTexts extends Component {
     constructor(props) {
         super(props);
 
-        let amount = this.props.isMobileDevice ? 5 : 10;
+        let amount = 5;
 
         this.devChars = [];
         for(let i = 0; i < amount; i++){
