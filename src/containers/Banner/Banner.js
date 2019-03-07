@@ -4,7 +4,7 @@ import BubblingDevTexts from '../../components/BubblingDevTexts';
 class Banner extends Component {
     constructor(props) {
         super(props);
-        this.state = { width: 0, height: 0 };
+        this.state = { width: 0, height: 0, isMobileDevice: true };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
       }
 
@@ -20,6 +20,7 @@ class Banner extends Component {
         this.updateWindowDimensions();
         if(!this.isMobileDevice()){
             window.addEventListener('resize', this.updateWindowDimensions);
+            this.setState({isMobileDevice = false});
         }
     }
     
@@ -39,7 +40,7 @@ class Banner extends Component {
         return ( 
             <div id={this.props.id} className='fadeInMoveUpBanner'
                 style={{...this.style, height: this.state.height, overflow: 'hidden'}}>
-                <BubblingDevTexts isMobileDevice={this.isMobileDevice()} />
+                <BubblingDevTexts isMobileDevice={this.state.isMobileDevice} />
                 <div style={{ fontSize: '4em'}} >
                     Welcome!
                 </div>
