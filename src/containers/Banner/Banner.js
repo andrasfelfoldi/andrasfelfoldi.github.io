@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import BubblingDevTexts from '../../components/BubblingDevTexts';
+
 class Banner extends Component {
     constructor(props) {
         super(props);
@@ -11,7 +13,6 @@ class Banner extends Component {
         justifyContent: 'center',
         alignItems: 'center',
         fontFamily: 'Staatliches, cursive',
-        fontSize: '4em',
         width: '100%',
     }
       
@@ -37,8 +38,11 @@ class Banner extends Component {
     render() { 
         return ( 
             <div id={this.props.id} className='fadeInMoveUpBanner'
-                style={{...this.style, height: this.state.height}}>
-                Welcome!
+                style={{...this.style, height: this.state.height, overflow: 'hidden'}}>
+                <BubblingDevTexts isMobileDevice={this.isMobileDevice()} />
+                <div style={{ fontSize: '4em'}} >
+                    Welcome!
+                </div>
             </div>
         );
     }
