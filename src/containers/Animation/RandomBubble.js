@@ -4,7 +4,7 @@ import getRandomIntBelow from "../../utils/Random";
 class RandomBubble extends React.Component {
     constructor(props) {
         super(props);
-        this.state = ({className: ''});
+        this.state = ({ width: 0, height: 0, className: ''});
 
         this.lastTop = this.getRandomTop();
         this.lastLeft = this.getRandomLeft();
@@ -13,16 +13,33 @@ class RandomBubble extends React.Component {
     classes = ['bubbleIn', 'bubbleOut'];
     current = 1;
 
-    componentDidMount = () => {
+    componentDidMount() {
+        this.updateWindowDimensions();
+        if(!this.isMobileDevice()){
+            window.addEventListener('resize', this.updateWindowDimensions);
+        }
+
         this.infinitelyToggleClass();
     }
+    
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+    
+    updateWindowDimensions() {
+        this.setState({ height: window.innerHeight, width: window.innerWidth });
+    }
+
+    isMobileDevice = () => {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    };
 
     getRandomTop = () => {
-        return getRandomIntBelow(window.innerHeight);
+        return getRandomIntBelow(this.state.height);
     }
 
     getRandomLeft = () => {
-        return getRandomIntBelow(window.innerWidth);
+        return getRandomIntBelow(this.state.width);
     }
 
     infinitelyToggleClass = () => {
