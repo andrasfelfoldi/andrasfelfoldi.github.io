@@ -20,7 +20,7 @@ class Banner extends Component {
         this.updateWindowDimensions();
         if(!this.isMobileDevice()){
             window.addEventListener('resize', this.updateWindowDimensions);
-            this.setState({isMobileDevice = false});
+            this.setState({isMobileDevice: false});
         }
     }
     
