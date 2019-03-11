@@ -10,7 +10,7 @@ class RandomBubble extends React.Component {
     classes = ['bubbleIn', 'bubbleOut'];
     // colors = ['#FFFFFF', '#c586c0', '#ce9178', '#9cdcfe', '#569cd6', '#4ec9b0'];
     current = 1;
-    currentColor = '#AAAAAA';
+    currentColor = '#888888';
     // currentColor = this.colors[getRandomIntBelow(this.colors.length)];
 
     componentDidMount() {
