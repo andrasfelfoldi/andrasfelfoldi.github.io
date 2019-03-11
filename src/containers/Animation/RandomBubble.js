@@ -8,7 +8,10 @@ class RandomBubble extends React.Component {
     }
 
     classes = ['bubbleIn', 'bubbleOut'];
+    // colors = ['#FFFFFF', '#c586c0', '#ce9178', '#9cdcfe', '#569cd6', '#4ec9b0'];
     current = 1;
+    currentColor = '#AAAAAA';
+    // currentColor = this.colors[getRandomIntBelow(this.colors.length)];
 
     componentDidMount() {
         this.updateWindowDimensions();
@@ -37,11 +40,11 @@ class RandomBubble extends React.Component {
     };
 
     getRandomTop = () => {
-        return getRandomIntBelow(this.state.height-30); // just to avoid overflow
+        return getRandomIntBelow(this.state.height);
     }
 
     getRandomLeft = () => {
-        return getRandomIntBelow(this.state.width-30);
+        return getRandomIntBelow(this.state.width);
     }
 
     infinitelyToggleClass = () => {
@@ -50,6 +53,7 @@ class RandomBubble extends React.Component {
 
         this.lastTop = this.current === 0 ? this.getRandomTop() : this.lastTop;
         this.lastLeft = this.current === 0 ? this.getRandomLeft() : this.lastLeft;
+        // this.currentColor = this.current === 0 ? this.colors[getRandomIntBelow(this.colors.length)] : this.currentColor;
 
         this.setState({className: this.classes[this.current]});
         setTimeout(() => {
@@ -60,7 +64,7 @@ class RandomBubble extends React.Component {
 
     render() { 
         return (
-            <div style={{ opacity: 0, position: 'absolute', top: this.lastTop, left: this.lastLeft }} className={this.state.className}>
+            <div style={{ opacity: 0, position: 'absolute', top: this.lastTop, left: this.lastLeft, color: this.currentColor }} className={this.state.className}>
                 {this.props.children}
             </div>
         );

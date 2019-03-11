@@ -24,7 +24,7 @@ class BubblingDevTexts extends Component {
       
     render() { 
         return ( 
-            <div  className='' style={{fontFamily: 'Staatliches, cursive'}} >
+            <div style={{fontFamily: 'Staatliches, cursive'}} >
                 {this.devChars}
             </div>
         );

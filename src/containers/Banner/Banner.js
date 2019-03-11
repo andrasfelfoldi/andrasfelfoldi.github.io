@@ -14,6 +14,7 @@ class Banner extends Component {
         alignItems: 'center',
         fontFamily: 'Staatliches, cursive',
         width: '100%',
+        position: 'absolute', top: 0, left: 0
     }
       
     componentDidMount() {
@@ -38,9 +39,9 @@ class Banner extends Component {
 
     render() { 
         return (
-            <div style={{overflow: 'hidden'}} >
+            <div>
                 <div id={this.props.id} 
-                    style={{...this.style, height: this.state.height, overflow: 'hidden'}}>
+                    style={{...this.style, height: this.state.height, width: '100%', overflow: 'hidden'}}>
                     <BubblingDevTexts isMobileDevice={this.state.isMobileDevice} />
                     <div style={{width: '100%', height: '50%', position: 'absolute', top: 0, left: 0, overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
                         <div style={{ fontSize: '15vw' }} className='fadeInMoveUpBanner' >
@@ -50,7 +51,6 @@ class Banner extends Component {
                 </div>
                 <div id='bannerHrContainer'>
                     <hr id='bannerHr'/>
-                    {/* <div style={{height: '50vh', backgroundColor: '#161616'}}></div> */}
                 </div>
             </div>
         );

@@ -21,7 +21,9 @@ class Main extends Component {
     render() { 
         return (
             <div >
-                <Banner id={'banner'} />
+                <SectionContainer id={'section ' + 0} style={{backgroundColor: '#161616'}}>
+                    <Banner id={'banner'} />
+                </SectionContainer>
                 <SectionContainer id={'section ' + 1} style={{backgroundColor: '#222222'}}>
                     <SudokuShowcase />
                 </SectionContainer>
