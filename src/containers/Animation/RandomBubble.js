@@ -21,7 +21,7 @@ class RandomBubble extends React.Component {
 
         setTimeout(() => {
             this.infinitelyToggleClass();
-        }, 2000 + getRandomIntBelow(5000));
+        }, 1000 + getRandomIntBelow(10000));
     }
     
     componentWillUnmount() {
@@ -37,11 +37,11 @@ class RandomBubble extends React.Component {
     };
 
     getRandomTop = () => {
-        return getRandomIntBelow(this.state.height);
+        return getRandomIntBelow(this.state.height-30); // just to avoid overflow
     }
 
     getRandomLeft = () => {
-        return getRandomIntBelow(this.state.width);
+        return getRandomIntBelow(this.state.width-30);
     }
 
     infinitelyToggleClass = () => {
