@@ -91,6 +91,8 @@
 #bannerHrContainer {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
     opacity: 1;
     width: 100%;
     position: absolute;
