@@ -46,6 +46,22 @@
     -webkit-animation-delay: 1s;
 }
 
+@keyframes fadeInMoveDownBanner {
+    /* from {opacity: 0; transform: translateY(20vh)}
+    to {opacity: 1; transform: translateY(0vw)} */
+    from {transform: translateY(-30vh)}
+    to {transform: translateY(2.5vw)}
+}
+
+.fadeInMoveDownBanner {
+    /* opacity: 0; */
+    transform: translateY(-30vh);
+    animation: fadeInMoveDownBanner 1.5s forwards;
+    -webkit-animation: fadeInMoveDownBanner 1.5s forwards; /* for less modern browsers */
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+}
+
 @keyframes bubbleIn {
     from {opacity: 0;}
     to {opacity: 1;}
