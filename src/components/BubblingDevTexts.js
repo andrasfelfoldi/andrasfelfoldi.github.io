@@ -37,6 +37,10 @@ class BubblingDevTexts extends Component {
                 <RandomBubble key={8}>{'UI5'}</RandomBubble>
                 <RandomBubble key={9}>{'ES6'}</RandomBubble>
                 <RandomBubble key={10}>{'Spring'}</RandomBubble>
+                <RandomBubble key={11}>{'Git'}</RandomBubble>
+                <RandomBubble key={12}>{'Docker'}</RandomBubble>
+                <RandomBubble key={13}>{'npm'}</RandomBubble>
+                <RandomBubble key={14}>{'Maven'}</RandomBubble>
             </div>
         );
     }

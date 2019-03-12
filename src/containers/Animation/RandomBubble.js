@@ -10,7 +10,7 @@ class RandomBubble extends React.Component {
     classes = ['bubbleIn', 'bubbleOut'];
     // colors = ['#FFFFFF', '#c586c0', '#ce9178', '#9cdcfe', '#569cd6', '#4ec9b0'];
     current = 1;
-    currentColor = '#888888';
+    currentColor = '#555555';
     // currentColor = this.colors[getRandomIntBelow(this.colors.length)];
 
     componentDidMount() {
@@ -64,7 +64,7 @@ class RandomBubble extends React.Component {
 
     render() { 
         return (
-            <div style={{ opacity: 0, position: 'absolute', top: this.lastTop, left: this.lastLeft, color: this.currentColor }} className={this.state.className}>
+            <div style={{ opacity: 0, position: 'absolute', top: this.lastTop, left: this.lastLeft, color: this.currentColor, fontSize: '0.8em' }} className={this.state.className}>
                 {this.props.children}
             </div>
         );
