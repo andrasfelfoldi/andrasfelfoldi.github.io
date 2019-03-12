@@ -25,7 +25,18 @@ class BubblingDevTexts extends Component {
     render() { 
         return ( 
             <div style={{fontFamily: 'Staatliches, cursive'}} >
-                {this.devChars}
+                {/* {this.devChars} */}
+                <RandomBubble key={0}>{'React'}</RandomBubble>
+                <RandomBubble key={1}>{'Redux'}</RandomBubble>
+                <RandomBubble key={2}>{'React Native'}</RandomBubble>
+                <RandomBubble key={3}>{'Expo'}</RandomBubble>
+                <RandomBubble key={4}>{'Babel'}</RandomBubble>
+                <RandomBubble key={5}>{'Webpack'}</RandomBubble>
+                <RandomBubble key={6}>{'Java'}</RandomBubble>
+                <RandomBubble key={7}>{'JavaScript'}</RandomBubble>
+                <RandomBubble key={8}>{'UI5'}</RandomBubble>
+                <RandomBubble key={9}>{'ES6'}</RandomBubble>
+                <RandomBubble key={10}>{'Spring'}</RandomBubble>
             </div>
         );
     }

@@ -3,6 +3,12 @@ import lightThemeImage from "../../../static/img/light-theme.png";
 import FadeInMoveUp from "../../containers/Animation/FadeInMoveUp"
 import GooglePlayBadge from './GooglePlayBadge';
 import './style.css'
+import reactSVG from "../../../static/svg/react.svg";
+import reduxSVG from "../../../static/svg/redux.svg";
+import expoSVG from "../../../static/svg/expo.svg";
+import ReactLogo from './ReactLogo';
+import ReduxLogo from './ReduxLogo';
+import ExpoLogo from './ExpoLogo';
 
 class SudokuShowcase extends React.Component {
     constructor(props) {
@@ -34,8 +40,11 @@ class SudokuShowcase extends React.Component {
                 </div>
                 <div className='flexItem'>
                     <FadeInMoveUp>
-                        <img src={lightThemeImage} {...sizeProp}/>
-                        <GooglePlayBadge style={{widht: '10%'}} />
+                        <img id='sudokuImage' src={lightThemeImage} {...sizeProp}/>
+                        <GooglePlayBadge />
+                        <ReactLogo />
+                        <ReduxLogo />
+                        <ExpoLogo />
                     </FadeInMoveUp>
                 </div>
             </div>

@@ -7,15 +7,6 @@ class Banner extends Component {
         this.state = { width: 0, height: 0, isMobileDevice: true };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
       }
-
-    style = {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontFamily: 'Staatliches, cursive',
-        width: '100%',
-        position: 'absolute', top: 0, left: 0
-    }
       
     componentDidMount() {
         this.updateWindowDimensions();
@@ -41,11 +32,16 @@ class Banner extends Component {
         return (
             <div>
                 <div id={this.props.id} 
-                    style={{...this.style, height: this.state.height, width: '100%', overflow: 'hidden'}}>
+                    style={{...styles.container, height: this.state.height, width: '100%', overflow: 'hidden'}}>
                     <BubblingDevTexts isMobileDevice={this.state.isMobileDevice} />
-                    <div style={{width: '100%', height: '50%', position: 'absolute', top: 0, left: 0, overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
+                    <div style={{...styles.textContainer}}>
                         <div style={{ fontSize: '15vw' }} className='fadeInMoveUpBanner' >
                             Welcome!
+                        </div>
+                    </div>
+                    <div style={{...styles.textContainer, top: '50%', alignItems: 'flex-start' }}>
+                        <div style={{ fontSize: '5vw' }} className='fadeInMoveDownBanner' >
+                            Thank you for visiting!
                         </div>
                     </div>
                 </div>
@@ -57,6 +53,27 @@ class Banner extends Component {
     }
 }
 
+const styles = {
+    container: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontFamily: 'Staatliches, cursive',
+        width: '100%',
+        position: 'absolute', top: 0, left: 0
+    },
 
+    textContainer: {
+        width: '100%',
+        height: '50%',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        overflow: 'hidden',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flex-end',
+    }
+}
  
 export default Banner;

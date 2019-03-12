@@ -1,24 +1,45 @@
-@media (min-width: 481px) {
-    .flexContainer {
-
-    }
-
-    .flexItem {
-        width: 50%;
-    }
-}
-
 .flexContainer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    align-content: center;
     margin: 10px;
+    background-color: green;
+    width: 100vw;
+    height: 100%;
 }
 
 .flexItem {
     width: 100%;
     align-self: flex-start;
     text-align: justify;
-    margin: 10px;
+    margin: 0px 10px;
+    background-color: #161616;
+}
+
+#sudokuImage {
+    height: auto;
+    width: 40%;
+}
+
+#googlePlayBadge {
+    height: auto;
+    width: 40%;
+}
+
+.logo {
+    height: auto;
+    width: 10%;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .flexContainer {
+        width: 768px;
+    }
+
+    .flexItem {
+        width: 45%;
+    }
 }
