@@ -1,0 +1,24 @@
+@media (min-width: 481px) {
+    .flexContainer {
+
+    }
+
+    .flexItem {
+        width: 50%;
+    }
+}
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.flexItem {
+    width: 100%;
+    align-self: flex-start;
+    text-align: justify;
+    margin: 10px;
+}

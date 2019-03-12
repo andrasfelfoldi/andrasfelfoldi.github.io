@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Banner from './Banner/Banner';
 import SectionContainer from './SectionContainer';
-import SudokuShowcase from '../components/SudokuShowcase';
+import SudokuShowcase from '../components/SudokuShowcase/SudokuShowcase';
 import FadeInMoveUp from './Animation/FadeInMoveUp';
 
 class Main extends Component {
@@ -39,7 +39,7 @@ class Main extends Component {
                 </SectionContainer>
                 <SectionContainer id={'section ' + 4} style={{backgroundColor: '#555555'}}>
                     <FadeInMoveUp>
-                        Section 4
+                        Google Play and the Google Play logo are trademarks of Google LLC.
                     </FadeInMoveUp>
                 </SectionContainer>
                 <div id={'topBorder'} style={{position: 'fixed', top: 0, left: 0, width: '100%', height: 10, backgroundColor: '#888888'}}/>
