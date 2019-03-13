@@ -9,6 +9,7 @@ import expoSVG from "../../../static/svg/expo.svg";
 import ReactLogo from './ReactLogo';
 import ReduxLogo from './ReduxLogo';
 import ExpoLogo from './ExpoLogo';
+import AppDescriptionText from './AppDescriptionText';
 
 class SudokuShowcase extends React.Component {
     constructor(props) {
@@ -36,17 +37,16 @@ class SudokuShowcase extends React.Component {
                 <div className='flexContainer'>
                     <div className='flexItem'>
                         <FadeInMoveUp>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            {AppDescriptionText.line1}
+                        </FadeInMoveUp>
+                        <FadeInMoveUp>
+                            {AppDescriptionText.line2}
                         </FadeInMoveUp>
                     </div>
                     <div className='flexItem'>
                         <FadeInMoveUp>
                             <img id='sudokuImage' src={lightThemeImage} {...sizeProp}/>
                             <GooglePlayBadge />
-                            <ReactLogo />
-                            <ReduxLogo />
-                            <ExpoLogo />
                         </FadeInMoveUp>
                     </div>
                 </div>

@@ -29,7 +29,7 @@ class SectionContainer extends Component {
     render() { 
         return (
             // <div id={this.props.id} style={{...style, ...this.props.style, width: '100%', height: this.state.height}}>
-            <div id={this.props.id} style={{...style, ...this.props.style, width: '100vw', height: '100vh'}}>
+            <div id={this.props.id} style={{...style, ...this.props.style, width: '100%', height: '100vh'}}>
                 {this.props.children}
             </div>
         );

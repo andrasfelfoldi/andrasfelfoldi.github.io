@@ -31,6 +31,7 @@ class Main extends Component {
                 <SectionContainer id={'section ' + 4} style={{backgroundColor: '#555555'}}>
                     <FadeInMoveUp>
                         Google Play and the Google Play logo are trademarks of Google LLC.
+                        Android is a trademark of Google LLC.
                     </FadeInMoveUp>
                 </SectionContainer>
 

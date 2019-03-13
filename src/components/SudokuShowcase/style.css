@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     background-color: blue;
     height: 100%;
 }
@@ -18,13 +18,15 @@
     background-color: green;
     width: 100vw;
     height: 100%;
+    padding: 10px;
 }
 
 .flexItem {
     width: 100%;
     align-self: flex-start;
     text-align: justify;
-    margin: 0px 10px;
+    line-height: 1.5;
+    margin: 0px 4px;
     background-color: #161616;
 }
 
@@ -59,10 +61,27 @@
 
     .flexContainer {
         width: 768px;
-        height: 100vh;
+        height: 100%;
+        flex-wrap: nowrap;
     }
 
     .flexItem {
-        width: 45%;
+        align-self: center;
+        display: inline-block;
+        width: max-content;
+        height: 80%;
+        /* width: 45%; */
+    }
+
+    #sudokuImage {
+        height: 66vh;
+        width: auto;
+        /* height: auto;
+        width: 300px; */
+    }
+
+    #googlePlayBadge {
+        height: auto;
+        width: 100%;
     }
 }
