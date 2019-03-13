@@ -30,7 +30,7 @@ class FadeInMoveUp extends React.Component {
 
     render() { 
         return (
-            <div ref={this.ref} style={{opacity: 0}} className={this.state.className}>
+            <div ref={this.ref} style={{opacity: 0}} className={this.state.className} id={this.props.id}>
                 {this.props.children}
             </div>
         );

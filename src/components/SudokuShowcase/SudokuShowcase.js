@@ -36,6 +36,9 @@ class SudokuShowcase extends React.Component {
             <div id={this.props.id} className='container'>
                 <div className='flexContainer'>
                     <div className='flexItem'>
+                        <FadeInMoveUp id='sudokuTitle'>
+                            {AppDescriptionText.title}
+                        </FadeInMoveUp>
                         <FadeInMoveUp>
                             {AppDescriptionText.line1}
                         </FadeInMoveUp>
