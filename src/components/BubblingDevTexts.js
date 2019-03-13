@@ -41,7 +41,7 @@ class BubblingDevTexts extends Component {
                 <RandomBubble key={12}>{'Docker'}</RandomBubble>
                 <RandomBubble key={13}>{'npm'}</RandomBubble>
                 <RandomBubble key={14}>{'Maven'}</RandomBubble>
-                <RandomBubble key={15}>{'NodeJS'}</RandomBubble>
+                <RandomBubble key={15}>{'Node.JS'}</RandomBubble>
             </div>
         );
     }
