@@ -39,7 +39,7 @@ class SudokuShowcase extends React.Component {
                         <FadeInMoveUp id='sudokuTitle'>
                             {AppDescriptionText.title}
                         </FadeInMoveUp>
-                        <FadeInMoveUp>
+                        <FadeInMoveUp id='firstSection'>
                             {AppDescriptionText.line1}
                         </FadeInMoveUp>
                         <FadeInMoveUp>

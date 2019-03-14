@@ -1,5 +1,5 @@
 .container {
-    background-image: linear-gradient(#161616 0%, #222222 100%);
+    /* background-image: linear-gradient(#161616 0%, #222222 100%); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,8 +28,12 @@
     text-justify: distribute;
     hyphens: auto;
     line-height: 1.7em;
-    margin: 0px 10px;
+    margin: 10px 10px;
     /* background-color: #161616; */
+}
+
+#firstSection {
+    margin-bottom: 20px;
 }
 
 #sudokuTitle {
@@ -41,12 +45,12 @@
 
 #sudokuImage {
     height: auto;
-    width: 40%;
+    width: 100%;
 }
 
 #googlePlayBadge {
     height: auto;
-    width: 40%;
+    width: 100%;
 }
 
 #googlePlayBadge:hover {
@@ -69,7 +73,7 @@
     }
 
     .flexContainer {
-        width: 768px;
+        width: 740px;
         height: 100%;
         flex-wrap: nowrap;
     }

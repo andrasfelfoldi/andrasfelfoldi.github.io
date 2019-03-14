@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Staatliches');
 
 body {
-    background-color: #161616;
+    /* background-color: #161616; */
+    background-image: linear-gradient(#161616 0%, #383838 100%);
     /* font-family: 'Staatliches', cursive; */
     font-family: 'Montserrat', sans-serif;
     color: #cfd8dc;
