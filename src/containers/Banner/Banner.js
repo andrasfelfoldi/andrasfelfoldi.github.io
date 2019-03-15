@@ -33,7 +33,7 @@ class Banner extends Component {
             <div>
                 <div id={this.props.id} 
                     style={{...styles.container, height: this.state.height, width: '100%', overflow: 'hidden'}}>
-                    {/* <BubblingDevTexts isMobileDevice={this.state.isMobileDevice} /> */}
+                    <BubblingDevTexts isMobileDevice={this.state.isMobileDevice} />
                     <div style={{...styles.textContainer}}>
                         <div style={{ fontSize: '15vw' }} className='fadeInMoveUpBanner' >
                             Welcome!
