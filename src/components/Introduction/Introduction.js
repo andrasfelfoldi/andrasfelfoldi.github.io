@@ -30,6 +30,15 @@ class Introduction extends React.Component {
                                 {IntroductionTexts.line3}
                             </div>
                         </FadeInMoveUp>
+                        <FadeInMoveUp>
+                            <div className='section'>
+                                {IntroductionTexts.line4}
+                                <a href='https://github.com/andrasfelfoldi' style={{color: '#cfd8dc'}}>
+                                    {IntroductionTexts.line4link}
+                                </a>
+                                {IntroductionTexts.line4end}
+                            </div>
+                        </FadeInMoveUp>
                     </div>
                     <div className='flexItem'>
                         <FadeInMoveUp>

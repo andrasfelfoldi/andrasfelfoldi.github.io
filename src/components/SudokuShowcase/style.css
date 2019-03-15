@@ -16,7 +16,8 @@
     align-content: center;
     margin: 10px;
     /* background-color: green; */
-    width: 100vw;
+    width: 100%;
+    max-width: 450px;
     height: 100%;
     padding: 10px;
 }
@@ -46,11 +47,13 @@
 #sudokuImage {
     height: auto;
     width: 100%;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 #googlePlayBadge {
     height: auto;
     width: 100%;
+    transition: all .2s ease-in-out;
 }
 
 #googlePlayBadge:hover {
@@ -73,10 +76,13 @@
     }
 
     .flexContainer {
-        width: 740px;
+        max-width: none;
+        width: 730px;
         /* height: 100%; */
         height: 500px;
         flex-wrap: nowrap;
+        margin: 0px;
+        padding: 0px;
     }
 
     .flexItem {
