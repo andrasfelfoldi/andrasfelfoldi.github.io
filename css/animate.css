@@ -42,8 +42,8 @@
     transform: translateY(30vh);
     animation: fadeInMoveUpBanner 1.5s forwards;
     -webkit-animation: fadeInMoveUpBanner 1.5s forwards; /* for less modern browsers */
-    animation-delay: 1s;
-    -webkit-animation-delay: 1s;
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
 }
 
 @keyframes fadeInMoveDownBanner {
@@ -58,8 +58,8 @@
     transform: translateY(-30vh);
     animation: fadeInMoveDownBanner 1.5s forwards;
     -webkit-animation: fadeInMoveDownBanner 1.5s forwards; /* for less modern browsers */
-    animation-delay: 2s;
-    -webkit-animation-delay: 2s;
+    animation-delay: 2.5s;
+    -webkit-animation-delay: 2.5s;
 }
 
 @keyframes bubbleIn {
@@ -100,8 +100,8 @@
     width: 100%;
     animation: bannerHrAppearAndGrow 1.5s forwards;
     -webkit-animation: bannerHrAppearAndGrow 1.5s forwards; /* for less modern browsers */
-    /* animation-delay: 1s; */
-    /* -webkit-animation-delay: 1s; */
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
 }
 
 #bannerHrContainer {
