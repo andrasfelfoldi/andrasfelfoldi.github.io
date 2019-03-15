@@ -4,6 +4,7 @@ import SectionContainer from './SectionContainer';
 import SudokuShowcase from '../components/SudokuShowcase/SudokuShowcase';
 import FadeInMoveUp from './Animation/FadeInMoveUp';
 import Borders from '../components/Borders';
+import Introduction from '../components/Introduction/Introduction';
 
 class Main extends Component {
     
@@ -15,14 +16,15 @@ class Main extends Component {
                     <Banner id={'banner'} />
                 </SectionContainer>
 
-                <SudokuShowcase id={'section ' + 1}/>
-
-                <SectionContainer id={'section ' + 2}>
-                {/* <SectionContainer id={'section ' + 2} style={{backgroundColor: '#333333'}}> */}
+                {/* <SectionContainer id={'section ' + 1}>
                     <FadeInMoveUp>
                         Section 2
                     </FadeInMoveUp>
-                </SectionContainer>
+                </SectionContainer> */}
+
+                <Introduction id={'section ' + 1}/>
+
+                <SudokuShowcase id={'section ' + 2}/>
 
                 <SectionContainer id={'section ' + 3}>
                 {/* <SectionContainer id={'section ' + 3} style={{backgroundColor: '#444444'}}> */}

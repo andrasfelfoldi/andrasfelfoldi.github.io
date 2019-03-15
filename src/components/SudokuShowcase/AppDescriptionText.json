@@ -1,5 +1,5 @@
 {
     "title": "Sudoku Mobile",
-    "line1": "My most recent personal project is an Android™ application called Sudoku Mobile. Sudoku Mobile is built using React Native, Redux and Expo.",
-    "line2": "It's free and does not contain any ads - for now - so if you like Sudoku or just puzzle games in general, give it a try! Please note that Sudoku Mobile is still in beta. Some performance improvements, additional features, an optional dark theme other and creature comforts and are still on the way!"
+    "line1": "My most recent personal project is an Android™ application called Sudoku Mobile. Sudoku Mobile is built using React Native, Redux and Expo. It uses my own npm package to generate the puzzles.",
+    "line2": "It's free and does not contain any ads - for now - so if you like Sudoku or just puzzle games in general, give it a try! Please note that Sudoku Mobile is still in beta. Some performance improvements, additional features, an optional dark theme and other creature comforts and are still on the way!"
 }
