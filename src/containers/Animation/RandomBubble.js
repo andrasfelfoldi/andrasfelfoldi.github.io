@@ -8,10 +8,10 @@ class RandomBubble extends React.Component {
     }
 
     classes = ['bubbleIn', 'bubbleOut'];
-    // colors = ['#FFFFFF', '#c586c0', '#ce9178', '#9cdcfe', '#569cd6', '#4ec9b0'];
+    colors = ['#FFFFFF', '#c586c0', '#ce9178', '#9cdcfe', '#569cd6', '#4ec9b0'];
     current = 1;
-    currentColor = '#555555';
-    // currentColor = this.colors[getRandomIntBelow(this.colors.length)];
+    // currentColor = '#555555';
+    currentColor = this.colors[getRandomIntBelow(this.colors.length)];
 
     componentDidMount() {
         this.updateWindowDimensions();
@@ -53,7 +53,7 @@ class RandomBubble extends React.Component {
 
         this.lastTop = this.current === 0 ? this.getRandomTop() : this.lastTop;
         this.lastLeft = this.current === 0 ? this.getRandomLeft() : this.lastLeft;
-        // this.currentColor = this.current === 0 ? this.colors[getRandomIntBelow(this.colors.length)] : this.currentColor;
+        this.currentColor = this.current === 0 ? this.colors[getRandomIntBelow(this.colors.length)] : this.currentColor;
 
         this.setState({className: this.classes[this.current]});
         setTimeout(() => {

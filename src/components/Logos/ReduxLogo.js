@@ -5,7 +5,7 @@ const ReduxLogo = (props) => {
     return (
         <div style={props.style} >
             <a href='https://redux.js.org/'>
-                <img className='logo' alt='React' src={reduxSVG} />
+                <img className='logo' alt='Redux' src={reduxSVG} />
             </a>
         </div>
     );

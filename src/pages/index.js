@@ -13,7 +13,7 @@ export default () => (
     <Provider store={store}>
         <div>
             <Main />
-            <ScrollButton />
+            {/* <ScrollButton /> */}
         </div>
     </Provider>
 )

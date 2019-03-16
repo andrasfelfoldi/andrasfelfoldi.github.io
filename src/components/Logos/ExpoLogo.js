@@ -5,7 +5,7 @@ const ExpoLogo = (props) => {
     return (
         <div style={props.style} >
             <a href='https://expo.io/'>
-                <img className='logo' alt='React' src={expoSVG} />
+                <img className='logo' alt='Expo' src={expoSVG} />
             </a>
         </div>
     );
