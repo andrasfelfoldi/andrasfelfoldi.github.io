@@ -1,6 +1,31 @@
 {
-    "title":"My Stack",
-    "line1":"",
-    "line2":"",
-    "line3":""
+    "title":"My Main Stack",
+
+    "mainText":"These are the languages, frameworks and technologies I use on an almost daily basis (with no particular order) are:",
+
+    "mainTech": ["HTML", "CSS", "JavaScript (ES6)", "React", "React Native", "Redux", "SAPUI5", "Git", "Docker", "npm"],
+    "secondaryTech": ["Java", "Spring", "Node.js", "Babel", "Webpack", "Maven", "PostgreSQL", "MongoDB"],
+
+    "html":"HTML",
+    "css":"CSS",
+    "js":"JavaScript (ES6)",
+    "react":"React",
+    "reactnative":"React Native",
+    "redux":"Redux",
+    "sapui5":"SAPUI5",
+    "git":"Git",
+    "docker":"Docker",
+    "npm":"npm",
+
+    "secondaryText":"These are some of the languages and technologies I'm also familiar with, but don't use on a regular basis:",
+
+    "java":"Java",
+    "spring":"Spring",
+    "node":"Node.js",
+    "babel":"Babel",
+    "webpack":"Webpack",
+    "maven":"Maven",
+    "postgres":"PostgreSQL",
+    "mongo":"MongoDB"
+   
 }

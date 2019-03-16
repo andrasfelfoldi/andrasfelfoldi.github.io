@@ -16,33 +16,43 @@ class Skills extends React.Component {
                         </FadeInMoveUp>
                         <FadeInMoveUp>
                             <div className='section'>
-                                {SkillsTexts.line1}
+                                {SkillsTexts.mainText}
                             </div>
                         </FadeInMoveUp>
-                        <FadeInMoveUp>
-                            <div className='section'>
-                                {SkillsTexts.line2}
-                            </div>
-                        </FadeInMoveUp>
-                        <FadeInMoveUp>
-                            <div className='section'>
-                                {SkillsTexts.line3}
-                            </div>
-                        </FadeInMoveUp>
-                        {/* <FadeInMoveUp>
-                            <div className='section'>
-                                {IntroductionTexts.line4}
-                                <a href='https://github.com/andrasfelfoldi' style={{color: '#cfd8dc'}}>
-                                    {IntroductionTexts.line4link}
-                                </a>
-                                {IntroductionTexts.line4end}
-                            </div>
-                        </FadeInMoveUp> */}
+
+                        <ul>
+                            {SkillsTexts.mainTech.map((tech, i) => 
+                                <li key={i}>
+                                    <FadeInMoveUp>
+                                            - {tech}
+                                    </FadeInMoveUp>
+                                </li>
+                            )}
+                        </ul>
+
                     </div>
                     <div className='flexItem'>
-                        {/* <FadeInMoveUp>
-                            <img id='profilepic' src={profilepic}/>
-                        </FadeInMoveUp> */}
+                        <FadeInMoveUp id='secondaryTitle'>
+                            {/* {SkillsTexts.title} */}
+                            Secondary Stack
+                        </FadeInMoveUp>
+
+                        <FadeInMoveUp>
+                            <div className='section'>
+                                {SkillsTexts.secondaryText}
+                            </div>
+                        </FadeInMoveUp>
+
+                        <ul>
+                            {SkillsTexts.secondaryTech.map((tech, i) => 
+                                <li key={i}>
+                                    <FadeInMoveUp>
+                                            - {tech}
+                                    </FadeInMoveUp>
+                                </li>
+                            )}
+                        </ul>
+
                     </div>
                 </div>
             </div>

@@ -5,6 +5,8 @@ import SudokuShowcase from '../components/SudokuShowcase/SudokuShowcase';
 import FadeInMoveUp from './Animation/FadeInMoveUp';
 import Borders from '../components/Borders';
 import Introduction from '../components/Introduction/Introduction';
+import Skills from '../components/Skills/Skills';
+import Footer from '../components/Footer/Footer';
 
 class Main extends Component {
     
@@ -24,22 +26,11 @@ class Main extends Component {
 
                 <Introduction id={'section ' + 1}/>
 
-                <SudokuShowcase id={'section ' + 2}/>
+                <Skills id={'section ' + 2}/>
 
-                <SectionContainer id={'section ' + 3}>
-                {/* <SectionContainer id={'section ' + 3} style={{backgroundColor: '#444444'}}> */}
-                    <FadeInMoveUp>
-                        Section 3
-                    </FadeInMoveUp>
-                </SectionContainer>
+                <SudokuShowcase id={'section ' + 3}/>
 
-                <SectionContainer id={'section ' + 4}>
-                {/* <SectionContainer id={'section ' + 4} style={{backgroundColor: '#555555'}}> */}
-                    <FadeInMoveUp>
-                        Google Play and the Google Play logo are trademarks of Google LLC.
-                        Android is a trademark of Google LLC.
-                    </FadeInMoveUp>
-                </SectionContainer>
+                <Footer id={'section ' + 4}/>
 
                 <Borders />
             </div>
