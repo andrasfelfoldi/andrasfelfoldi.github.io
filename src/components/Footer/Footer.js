@@ -11,6 +11,7 @@ class Footer extends React.Component {
         return (
             <div id='footer'>
                 <ContactMe />
+                <hr />
                 <Legal />
             </div>
         );

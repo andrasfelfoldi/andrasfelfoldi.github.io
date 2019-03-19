@@ -18,6 +18,10 @@ class SudokuShowcase extends React.Component {
                         </FadeInMoveUp>
                         <FadeInMoveUp id='firstSection'>
                             {AppDescriptionText.line1}
+                            <a href='https://www.npmjs.com/package/fake-sudoku-puzzle-generator' style={{color: '#cfd8dc'}}>
+                                {AppDescriptionText.npm}
+                            </a>
+                            {AppDescriptionText.line1End}
                         </FadeInMoveUp>
                         <FadeInMoveUp>
                             {AppDescriptionText.line2}
